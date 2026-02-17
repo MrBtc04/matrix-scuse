@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generatore di scuse (Matrix)</title>
+    <meta name="description" content="Generatore di scuse casuali (in stile Matrix) per non andare al lavoro. Tutto locale, con scuse in un file TXT." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="matrix" aria-hidden="true"></canvas>
+
+    <main class="wrap">
+      <section class="card" role="region" aria-label="Generatore di scuse">
+        <header class="header">
+          <div class="badge">MATRIX MODE</div>
+          <h1>Generatore di scuse</h1>
+          <p class="sub">
+            Ti serve una scusa credibile (o quasi) per non andare al lavoro. Premi il pulsante e lascia fare al codice.
+          </p>
+        </header>
+
+        <div class="controls">
+          <fieldset class="levels" role="radiogroup" aria-label="Livello di credibilità">
+            <legend class="levels-title">Credibilità</legend>
+            <label class="pill">
+              <input type="radio" name="cred" value="1" />
+              <span>Plausibile</span>
+            </label>
+            <label class="pill">
+              <input type="radio" name="cred" value="2" checked />
+              <span>Molto plausibile</span>
+            </label>
+            <label class="pill">
+              <input type="radio" name="cred" value="3" />
+              <span>Quasi inattaccabile</span>
+            </label>
+          </fieldset>
+          <button id="btn" class="btn" type="button">Genera scusa</button>
+          <button id="copy" class="btn ghost" type="button" disabled>Copia</button>
+        </div>
+
+        <div class="output" aria-live="polite" aria-atomic="true">
+          <div class="label">Risultato</div>
+          <div id="result" class="result">Premi “Genera scusa”.</div>
+          <div id="meta" class="meta">Caricamento scuse…</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

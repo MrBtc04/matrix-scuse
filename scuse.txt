@@ -1,0 +1,157 @@
+# Una scusa per riga.
+# Usa i tag [1], [2], [3] per indicare il livello di credibilità:
+# [1] Plausibile • [2] Molto plausibile • [3] Quasi inattaccabile
+# Le righe vuote e quelle che iniziano con # vengono ignorate.
+
+[1] Non sto bene (raffreddore/mal di testa). Oggi resto a riposo.
+[1] Ho febbricola e brividi: oggi mi fermo per non peggiorare.
+[1] Ho un’emicrania forte e faccio fatica anche solo a stare in piedi.
+[1] Ho nausea e mal di stomaco: oggi devo restare a casa.
+[1] Ho mal di gola molto forte e la voce è quasi andata.
+[1] Ho tosse e mi sento spossato: oggi non sono lucido.
+[1] Ho dolori muscolari e stanchezza: oggi non riesco a rendere.
+[1] Ho la schiena bloccata e mi muovo male: oggi devo riposare.
+[1] Ho un torcicollo forte e non riesco a guidare serenamente.
+[1] Ho giramenti di testa e non me la sento di uscire.
+[1] Ho pressione bassa e mi sento debole.
+[1] Ho un’infiammazione ai seni nasali e un forte mal di testa.
+[1] Ho una reazione allergica importante e oggi devo gestirla.
+[1] Ho occhi irritati e fastidio forte: devo farmi controllare.
+[1] Ho un dolore ai denti che mi sta dando parecchio fastidio.
+[1] Ho avuto una notte quasi in bianco e oggi non sono operativo.
+[1] Ho dormito pochissimo per un imprevisto notturno e sono distrutto.
+[1] Non sto bene mentalmente oggi: ho bisogno di staccare e recuperare.
+[1] Ho un forte stato d’ansia stamattina e non riesco a gestire la giornata.
+[1] Oggi non riesco a concentrarmi: preferisco recuperare e ripartire bene.
+[1] Ho un imprevisto familiare e devo occuparmene stamattina.
+[1] Devo assistere un parente che non sta bene e non posso lasciarlo solo.
+[1] Il bimbo non sta bene e oggi devo restare con lui.
+[1] Ho un’urgenza domestica e devo risolverla oggi.
+[1] Ho un problema in casa (acqua/luce) e devo essere presente.
+[1] Mi sono accorto ora di una perdita in bagno e devo intervenire.
+[1] Ho perso le chiavi e devo gestire la situazione.
+[1] Ho smarrito dei documenti e devo occuparmene subito.
+[1] Ho un problema con l’auto e oggi non riesco a muovermi.
+[1] Ho una gomma a terra e sto cercando di risolvere.
+[1] La macchina non parte e devo capire cosa fare.
+[1] Ho avuto un piccolo incidente domestico e oggi devo riposare.
+[1] Mi sono fatto male a una caviglia e faccio fatica a camminare.
+[1] Mi sento male all’improvviso: preferisco non rischiare.
+[1] Devo sentire il medico oggi perché non sto bene.
+[1] Devo passare in farmacia per una cosa urgente.
+[1] Ho un appuntamento personale che non posso spostare.
+[1] Ho una commissione urgente che devo chiudere stamattina.
+[1] Devo accompagnare qualcuno per una cosa importante.
+[1] Ho un problema con Internet e oggi non riesco a lavorare bene.
+[1] Ho un blackout/guasto in zona e sto aspettando che rientri.
+[1] Ho un problema con la consegna a casa e devo essere presente.
+[1] Il corriere passa solo oggi e devo firmare.
+[1] Ho perso il portafoglio e devo bloccare tutto e fare denuncia.
+[1] Ho un forte mal di schiena e oggi devo stare fermo.
+[1] Ho una ricaduta influenzale e devo restare a casa.
+[1] Ho un malessere generale e oggi non riesco a venire.
+[1] Ho bisogno di un giorno di recupero: domani conto di essere ok.
+[1] Oggi non sono in condizioni di lavorare: mi rimetto e ci sentiamo domani.
+[1] Ho un forte mal di testa e sensibilità alla luce: oggi devo riposare.
+
+[2] Ho una visita medica fissata questa mattina e non riesco a spostarla.
+[2] Ho una visita dal medico e mi ha dato la prima disponibilità oggi.
+[2] Ho un appuntamento dal dentista preso da tempo e devo andarci.
+[2] Devo fare degli esami/analisi questa mattina e ho l’orario già prenotato.
+[2] Ho una terapia/controllo programmato oggi e non posso saltarlo.
+[2] Devo ritirare dei referti oggi e gli orari sono solo al mattino.
+[2] Devo aspettare il tecnico a casa (fascia oraria stretta) e devo essere presente.
+[2] Ho l’intervento del tecnico per Internet/telefono e devo essere in casa.
+[2] Ho il controllo della caldaia/manutenzione condominiale e devo esserci.
+[2] Ho un guasto domestico e oggi viene l’idraulico/elettricista.
+[2] C’è una perdita d’acqua in casa e devo gestire l’intervento oggi.
+[2] Ho un guasto all’auto e sto aspettando l’assistenza/carrozziere.
+[2] Ho avuto una gomma bucata e sto risolvendo con il gommista.
+[2] Ho la batteria dell’auto a terra e devo sistemarla prima di muovermi.
+[2] Sono rimasto bloccato nel traffico per un incidente e non riesco ad arrivare.
+[2] Il treno è stato soppresso/ha accumulato un ritardo importante e non riesco ad arrivare in tempo.
+[2] Ci sono disservizi sulla linea e non riesco a raggiungere l’ufficio stamattina.
+[2] Ho un imprevisto con scuola/asilo e devo intervenire subito.
+[2] Mi hanno chiamato da scuola/asilo: devo andare a prendere il bimbo.
+[2] Ho un familiare che oggi ha bisogno di assistenza e devo accompagnarlo.
+[2] Devo accompagnare un parente a una visita e non ho alternative oggi.
+[2] Ho un’urgenza burocratica con scadenza oggi e devo andare allo sportello.
+[2] Devo fare denuncia per documenti smarriti e gli orari sono solo al mattino.
+[2] Ho un appuntamento urgente in banca/ufficio (pratica non rimandabile) e devo andarci di persona.
+[2] Devo firmare dei documenti oggi e posso farlo solo in fascia mattutina.
+[2] Ho un colloquio/appuntamento fissato da tempo e non posso spostarlo.
+[2] Devo ritirare un pacco in giacenza entro oggi o torna indietro.
+[2] Ho una consegna importante e devo essere in casa per il ritiro.
+[2] Sto aspettando una consegna con firma e la fascia oraria è vincolata.
+[2] Ho un problema con il condominio (perdita/guasto) e devo essere presente all’intervento.
+[2] Ho un problema con il contatore/utenze e devo ricevere il tecnico.
+[2] Non ho corrente in casa e sto aspettando l’assistenza/il ripristino.
+[2] La linea Internet è giù e il gestore ha fissato l’intervento oggi.
+[2] Ho avuto una notte con febbre e il medico mi ha consigliato riposo oggi.
+[2] Ho sintomi influenzali e preferisco restare a casa per evitare contagi.
+[2] Ho mal di schiena forte: oggi faccio riposo e terapia.
+[2] Ho un problema al ginocchio e devo fare accertamenti/visita.
+[2] Ho un’infiammazione e il medico mi ha dato appuntamento oggi.
+[2] Ho bisogno di passare in farmacia e dal medico: oggi è l’unico slot.
+[2] Ho un guasto alla porta/serratura e devo aspettare il fabbro.
+[2] Sono rimasto chiuso fuori casa e sto risolvendo con il fabbro/amministratore.
+[2] Ho un problema urgente con l’assicurazione/auto e devo chiudere oggi.
+[2] Ho un problema con il pagamento/bancomat e devo sistemare di persona.
+[2] Ho un imprevisto con un animale domestico (veterinario) e devo andarci.
+[2] Devo accompagnare qualcuno a fare una visita/controllo urgente.
+[2] Ho un controllo programmato e devo rispettare l’orario.
+[2] Ho una convocazione a un appuntamento in ufficio pubblico e non posso mancare.
+[2] Ho un problema con i documenti dell’auto e devo andare a sistemare oggi.
+[2] Ho un imprevisto logistico stamattina e non riesco a essere presente.
+[2] Ho una seduta/controllo dal fisioterapista programmato oggi e non riesco a spostarlo.
+
+[3] Sono in guardia medica/ambulatorio questa mattina: ti aggiorno appena esco.
+[3] Ho una visita medica con certificazione: se serve posso inviare il giustificativo.
+[3] Ho analisi del sangue prenotate con appuntamento questa mattina: rientro appena finisco.
+[3] Ho una visita specialistica prenotata da tempo e non mi hanno dato alternative: appena finisco mi collego/rientro.
+[3] Ho un controllo in ospedale già calendarizzato oggi: appena chiudo ti aggiorno sugli orari.
+[3] Sto aspettando l’esito/il referto di un controllo e oggi devo ritirarlo di persona.
+[3] Ho un appuntamento ASL/ambulatorio con orario fissato: non riesco a spostarlo.
+[3] Mi hanno anticipato una visita/controllo e mi hanno messo oggi come prima data utile.
+[3] Devo accompagnare un familiare a una visita ospedaliera già fissata: ti tengo aggiornato.
+[3] Ho un familiare con visita/terapia oggi e devo essere io ad accompagnarlo.
+[3] Ho un problema con la scuola/asilo che richiede la mia presenza oggi (comunicazione ricevuta stamattina).
+[3] Mi hanno chiamato da scuola/asilo per un imprevisto: sto andando a gestire ora.
+[3] Sono bloccato con l’assistenza stradale (pratica aperta): appena riparto ti scrivo.
+[3] Ho il carro attrezzi/assistenza in arrivo: finché non chiudono la pratica non riesco a muovermi.
+[3] Ho avuto un guasto all’auto e sono dal meccanico: appena ho la macchina ti aggiorno.
+[3] Sono rimasto fermo per un incidente/ingorgo importante: non riesco a rientrare in tempi utili.
+[3] Il treno è cancellato e la prossima corsa utile mi farebbe arrivare troppo tardi: oggi non riesco.
+[3] Ho il tecnico (utenze/caldaia) in arrivo nella fascia 8–12: appena finisce mi collego.
+[3] Ho il tecnico della fibra in casa con intervento programmato: appena chiudono l’ordine mi collego.
+[3] Ho un intervento idraulico urgente in corso: devo restare presente finché non chiudono il lavoro.
+[3] C’è una perdita condominiale e oggi c’è l’intervento: devo essere presente per l’accesso.
+[3] Ho l’elettricista in casa per un guasto: finché non ripristina non posso allontanarmi.
+[3] Ho un guasto alla serratura e sto aspettando il fabbro: appena chiudo rientro.
+[3] Sono rimasto chiuso fuori casa e sto aspettando il fabbro/amministratore per l’accesso.
+[3] Ho una convocazione/urgenza documentale con scadenza oggi (sportello su appuntamento): rientro appena chiudo.
+[3] Ho un appuntamento in Questura/ufficio pubblico (su prenotazione) e non posso riprogrammarlo oggi.
+[3] Devo fare denuncia per smarrimento documenti e ho appuntamento allo sportello questa mattina.
+[3] Ho un appuntamento in banca per una pratica vincolata (firma/identificazione): appena esco ti aggiorno.
+[3] Ho una pratica notarile/firmataria fissata oggi: non riesco a spostarla.
+[3] Ho un appuntamento per rinnovo/ritiro documenti con orario fissato: rientro appena finisco.
+[3] Ho una consegna con firma e devo essere presente in fascia oraria vincolata: appena passa mi collego.
+[3] Sto aspettando un ritiro/consegna con firma in una finestra oraria vincolata: appena passa riparto.
+[3] Ho la corrente saltata e l’assistenza è programmata oggi: finché non ripristinano non riesco.
+[3] La linea Internet è fuori servizio e il gestore ha fissato l’intervento oggi: appena torna su mi collego.
+[3] Ho un guasto al contatore/utenze e oggi passa il tecnico: devo essere presente.
+[3] Ho un’urgenza veterinaria e devo portare l’animale in ambulatorio ora.
+[3] Sono dal veterinario per un’urgenza: appena finisco ti aggiorno sugli orari.
+[3] Ho un appuntamento per esami/visita con tempi di attesa: oggi rischio di slittare e non riesco a rientrare.
+[3] Ho un certificato/giustificativo in arrivo oggi dal medico: appena lo ho, ti aggiorno.
+[3] Mi hanno prescritto riposo oggi dopo visita: rientro appena sto meglio.
+[3] Ho una terapia programmata con orario fisso: oggi non riesco a essere presente.
+[3] Devo accompagnare un familiare a un controllo già fissato e non ho alternative: ti aggiorno a fine visita.
+[3] Ho un imprevisto familiare serio da gestire oggi: appena posso ti scrivo con un update.
+[3] Ho un’urgenza amministrativa con scadenza oggi e appuntamento fissato: appena chiudo rientro.
+[3] Sto gestendo un intervento urgente in casa con tecnico sul posto: appena termina mi collego.
+[3] Ho un disservizio importante che mi impedisce di muovermi/collegarmi: ti aggiorno appena risolto.
+[3] Ho un controllo post-visita già fissato oggi e non riesco a spostarlo: appena finisco ti aggiorno.
+[3] Ho un sopralluogo/intervento condominiale urgente (perdita): devo dare accesso e firmare il verbale.
+[3] Ho un appuntamento allo sportello su prenotazione per una pratica documentale: rientro appena chiudo.
+[3] Sto aspettando un intervento tecnico del gestore per un guasto: finché non ripristinano non riesco a collegarmi.
