@@ -11,21 +11,23 @@ Formato consigliato per ogni riga:
 - `[2] ...` → Molto plausibile
 - `[3] ...` → Quasi inattaccabile
 
-Le righe senza tag vengono trattate come livello `[2]` (compatibilità).
+Ogni scusa è già pronta da inviare: **inizia con “Buongiorno capo,”**.
+
+Le righe senza tag vengono trattate come livello `[2]` (compatibilità), ma nel pannello admin è consigliato usare sempre i tag.
 
 ### Avvio (consigliato)
 
-Per permettere al browser di leggere `scuse.txt` e (se ti serve) aggiornarlo via backend, avvia il server nella cartella:
+Per permettere al browser di leggere `scuse.txt` e per avere una pagina di gestione, avvia il backend nella cartella:
 
 ```bash
 cd /Users/mariopaaris/matrix-scuse
-ADMIN_KEY="metti-una-chiave" python3 backend/server.py
+python3 server.py
 ```
 
 Poi apri:
 
-- `http://localhost:8080` → generatore
-- `http://localhost:8080/admin.html` → pagina admin (salva `scuse.txt` via API)
+- Sito: `http://127.0.0.1:8080`
+- Admin (modifica `scuse.txt`): `http://127.0.0.1:8080/admin`
 
 ### Nota
 

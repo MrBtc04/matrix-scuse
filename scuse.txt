@@ -69,7 +69,6 @@
 [2] Buongiorno capo, devo ritirare dei referti oggi e gli orari sono solo al mattino. Oggi non riesco a essere presente.
 [2] Buongiorno capo, devo aspettare il tecnico a casa (fascia oraria stretta) e devo essere presente. Oggi non potrò venire.
 [2] Buongiorno capo, ho l’intervento del tecnico per Internet/telefono e devo restare in casa. Oggi non riesco a venire.
-[2] Buongiorno capo, oggi ho il controllo della caldaia/manutenzione e devo essere presente. Oggi devo assentarmi.
 [2] Buongiorno capo, ho un guasto domestico e oggi viene l’idraulico/elettricista. Oggi non potrò essere in ufficio.
 [2] Buongiorno capo, c’è una perdita d’acqua in casa e devo gestire l’intervento oggi. Mi scuso, oggi non riesco a venire.
 [2] Buongiorno capo, ho un guasto all’auto e sto aspettando assistenza/meccanico. Oggi non riesco a venire.
@@ -91,8 +90,6 @@
 [2] Buongiorno capo, sto aspettando una consegna con firma e la fascia oraria è vincolata. Oggi devo assentarmi.
 [2] Buongiorno capo, ho un problema con il condominio (perdita/guasto) e devo essere presente all’intervento. Oggi non riuscirò a venire.
 [2] Buongiorno capo, ho un problema con il contatore/utenze e oggi devo ricevere il tecnico. Oggi non potrò essere presente.
-[2] Buongiorno capo, non ho corrente in casa e sto aspettando assistenza/ripristino. Oggi non riesco a venire.
-[2] Buongiorno capo, la linea Internet è giù e il gestore ha fissato l’intervento oggi. Oggi potrei non riuscire a essere operativo.
 [2] Buongiorno capo, ho sintomi influenzali e preferisco restare a casa per evitare contagi. Oggi non potrò venire.
 [2] Buongiorno capo, ho mal di schiena forte e oggi devo fare riposo/terapia. Oggi non riesco a essere presente.
 [2] Buongiorno capo, ho un problema al ginocchio e devo fare accertamenti/visita. Oggi non potrò venire.
@@ -105,6 +102,9 @@
 [2] Buongiorno capo, ho un imprevisto con un animale domestico e devo portarlo dal veterinario. Oggi non riesco a venire.
 [2] Buongiorno capo, devo accompagnare qualcuno a fare una visita/controllo urgente. Oggi non potrò esserci.
 [2] Buongiorno capo, ho un controllo programmato e devo rispettare l’orario. Oggi non riesco a venire.
+[2] Buongiorno capo, ho una convocazione in un ufficio pubblico e non posso mancare. Oggi devo assentarmi.
+[2] Buongiorno capo, ho un problema con i documenti dell’auto e devo andare a sistemare oggi. Oggi non potrò venire.
+[2] Buongiorno capo, ho una seduta/controllo dal fisioterapista programmato oggi e non riesco a spostarlo. Oggi devo assentarmi.
 
 [3] Buongiorno capo, mi hanno dato un appuntamento in ambulatorio/guardia medica questa mattina. Oggi non riuscirò a venire; appena esco vi aggiorno.
 [3] Buongiorno capo, ho una visita medica con certificazione e oggi devo necessariamente presentarmi. Se serve posso inviare il giustificativo.
