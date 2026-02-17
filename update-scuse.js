@@ -8,9 +8,9 @@ export const handler = async (event) => {
   }
 
   const {
-    GITHUB_TOKEN,
+    GITHUB_TOKEN = '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',
     GITHUB_OWNER = 'MrBtc04',
-    GITHUB_REPO,
+    GITHUB_REPO = 'matrix-scuse',
     GITHUB_BRANCH = 'main',
     SCUSE_PATH = 'scuse.txt',
   } = process.env;
