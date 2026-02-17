@@ -6,6 +6,9 @@
   --muted: rgba(185, 255, 185, 0.75);
   --border: rgba(0, 255, 65, 0.25);
   --shadow: rgba(0, 255, 65, 0.25);
+  --glass: rgba(5, 6, 7, 0.70);
+  --crt: rgba(0, 255, 65, 0.10);
+  --crt2: rgba(0, 255, 65, 0.06);
 }
 
 * { box-sizing: border-box; }
@@ -16,6 +19,14 @@ html, body {
   background: var(--bg);
   color: var(--fg);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  /* CRT-ish vignette */
+  background:
+    radial-gradient(1200px 700px at 50% 20%, rgba(0, 255, 65, 0.08), transparent 60%),
+    radial-gradient(1200px 800px at 50% 120%, rgba(0, 255, 65, 0.06), transparent 55%),
+    var(--bg);
 }
 
 #matrix {
@@ -37,14 +48,61 @@ html, body {
 
 .card {
   width: min(760px, 100%);
-  border: 1px solid var(--border);
-  background: rgba(5, 6, 7, 0.72);
-  backdrop-filter: blur(8px);
-  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 65, 0.26);
+  background:
+    linear-gradient(180deg, rgba(0, 255, 65, 0.05), rgba(0, 0, 0, 0) 22%),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.06), rgba(0, 0, 0, 0) 26%),
+    rgba(0, 0, 0, 0.62);
+  border-radius: 10px;
   padding: 22px 20px;
   box-shadow:
     0 0 0 1px rgba(0, 255, 65, 0.08),
+    0 0 0 6px rgba(0, 0, 0, 0.22),
+    0 0 55px rgba(0, 255, 65, 0.10),
     0 18px 60px rgba(0, 0, 0, 0.55);
+}
+
+.card::before {
+  content: "TERMINAL // MATRIX";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(185, 255, 185, 0.85);
+  background:
+    linear-gradient(180deg, rgba(0, 255, 65, 0.10), rgba(0, 255, 65, 0.02));
+  border-bottom: 1px solid rgba(0, 255, 65, 0.16);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 1px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0) 5px
+    );
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+}
+
+.header {
+  padding-top: 8px;
+  margin-top: 12px; /* account for terminal bar */
 }
 
 .header h1 {
@@ -71,7 +129,8 @@ html, body {
   font-size: 12px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  background: rgba(0, 255, 65, 0.06);
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 22px rgba(0, 255, 65, 0.10);
 }
 
 .controls {
@@ -79,6 +138,7 @@ html, body {
   gap: 10px;
   margin: 18px 0 14px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .levels {
@@ -87,9 +147,9 @@ html, body {
   gap: 8px;
   align-items: center;
   padding: 8px 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 255, 65, 0.22);
-  background: rgba(0, 255, 65, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 65, 0.18);
+  background: rgba(0, 0, 0, 0.35);
   margin: 0;
 }
 
@@ -108,13 +168,13 @@ html, body {
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 255, 65, 0.28);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 65, 0.22);
   color: rgba(185, 255, 185, 0.9);
   cursor: pointer;
   user-select: none;
   font-size: 12px;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0, 0, 0, 0.20);
   transition: background 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
@@ -126,7 +186,7 @@ html, body {
 
 .pill:has(input:checked) {
   border-color: rgba(0, 255, 65, 0.55);
-  background: rgba(0, 255, 65, 0.10);
+  background: rgba(0, 255, 65, 0.12);
   box-shadow: 0 0 18px rgba(0, 255, 65, 0.14);
   color: var(--fg);
 }
@@ -138,20 +198,21 @@ html, body {
 
 .btn {
   border: 1px solid rgba(0, 255, 65, 0.45);
-  background: linear-gradient(180deg, rgba(0, 255, 65, 0.16), rgba(0, 255, 65, 0.07));
+  background: linear-gradient(180deg, rgba(0, 255, 65, 0.14), rgba(0, 0, 0, 0.22));
   color: var(--fg);
   padding: 11px 14px;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 0.3px;
   box-shadow: 0 0 0 0 rgba(0,255,65,0);
-  transition: transform 120ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform 120ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 22px 0 rgba(0, 255, 65, 0.15);
+  border-color: rgba(0, 255, 65, 0.70);
+  box-shadow: 0 0 26px 0 rgba(0, 255, 65, 0.18);
 }
 
 .btn:active {
@@ -168,10 +229,12 @@ html, body {
 }
 
 .output {
-  border: 1px dashed rgba(0, 255, 65, 0.35);
-  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 65, 0.24);
+  border-radius: 10px;
   padding: 14px 14px 12px;
-  background: rgba(0, 0, 0, 0.25);
+  background:
+    radial-gradient(800px 200px at 20% 0%, rgba(0, 255, 65, 0.08), transparent 60%),
+    rgba(0, 0, 0, 0.32);
 }
 
 .label {
@@ -190,6 +253,7 @@ html, body {
     0 0 10px rgba(0, 255, 65, 0.14),
     0 0 26px rgba(0, 255, 65, 0.08);
   word-wrap: break-word;
+  animation: flicker 7s infinite;
 }
 
 .meta {
@@ -228,4 +292,14 @@ body::before {
   mix-blend-mode: overlay;
   opacity: 0.35;
   z-index: 2;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  41% { opacity: 0.98; }
+  42% { opacity: 0.92; }
+  43% { opacity: 0.99; }
+  67% { opacity: 0.97; }
+  68% { opacity: 0.90; }
+  69% { opacity: 0.98; }
 }
