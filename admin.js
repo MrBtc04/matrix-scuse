@@ -4,6 +4,8 @@
   const editor = document.getElementById('editor');
   const countsEl = document.getElementById('counts');
   const statusEl = document.getElementById('status');
+  const API_BASE = window.location.protocol === 'file:' ? 'http://127.0.0.1:8080' : '';
+  const apiUrl = (path) => `${API_BASE}${path}`;
 
   function setStatus(text) {
     statusEl.textContent = text || '';
@@ -40,14 +42,24 @@
   async function load() {
     setStatus('Caricamento…');
     try {
-      const res = await fetch('/api/scuse', { cache: 'no-store' });
+      const res = await fetch(apiUrl('/api/scuse'), { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error(`Backend non disponibile (HTTP ${res.status}). Apri questa pagina dal server: http://127.0.0.1:8080/admin`);
+      }
       const data = await res.json();
       if (!data.ok) throw new Error(data.error || 'Errore');
       editor.value = data.content || '';
       renderCounts();
       setStatus('Caricato.');
     } catch (e) {
-      setStatus('Errore nel caricamento: ' + (e?.message || e));
+      const msg = (e && e.message) || String(e);
+      if (window.location.protocol === 'file:') {
+        setStatus('Errore: stai aprendo il file in file://. Apri invece http://127.0.0.1:8080/admin (avvia: python3 server.py).');
+      } else if (msg.toLowerCase().includes('failed to fetch')) {
+        setStatus('Errore: non riesco a contattare il backend. Avvia il server (python3 server.py) e riapri /admin.');
+      } else {
+        setStatus('Errore nel caricamento: ' + msg);
+      }
     }
   }
 
@@ -60,7 +72,7 @@
 
     setStatus('Salvataggio…');
     try {
-      const res = await fetch('/api/scuse', {
+      const res = await fetch(apiUrl('/api/scuse'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content: editor.value }),
@@ -68,12 +80,19 @@
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) {
         const err = (data && (data.error || (data.errors && data.errors[0]))) || `HTTP ${res.status}`;
-        throw new Error(err);
+        throw new Error(`${err}. (Se sei su GitHub Pages, lì non esiste un backend: usa il server o ospitalo.)`);
       }
       renderCounts();
       setStatus('Salvato.');
     } catch (e) {
-      setStatus('Errore nel salvataggio: ' + (e?.message || e));
+      const msg = (e && e.message) || String(e);
+      if (window.location.protocol === 'file:') {
+        setStatus('Errore: stai aprendo il file in file://. Apri invece http://127.0.0.1:8080/admin (avvia: python3 server.py).');
+      } else if (msg.toLowerCase().includes('failed to fetch')) {
+        setStatus('Errore: non riesco a contattare il backend. Avvia il server (python3 server.py) e riprova.');
+      } else {
+        setStatus('Errore nel salvataggio: ' + msg);
+      }
     }
   }
 
