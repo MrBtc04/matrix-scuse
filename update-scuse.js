@@ -9,7 +9,7 @@ export const handler = async (event) => {
 
   const {
     GITHUB_TOKEN,
-    GITHUB_OWNER,
+    GITHUB_OWNER = 'MrBtc04',
     GITHUB_REPO,
     GITHUB_BRANCH = 'main',
     SCUSE_PATH = 'scuse.txt',
