@@ -14,6 +14,16 @@
     3: 'Quasi inattaccabile',
   };
 
+  function ensureReadyToSend(message) {
+    const msg = String(message || '').trim();
+    if (!msg) return '';
+    if (msg.startsWith('Buongiorno capo,')) return msg;
+
+    // Se l'utente avesse messo "Buongiorno," o simili, ripulisci e uniforma
+    const stripped = msg.replace(/^Buongiorno[^,]*,\s*/i, '').trim();
+    return `Buongiorno capo, ${stripped}`;
+  }
+
   const fallbackByLevel = {
     // fallback "ricco": così l'app resta utile anche senza poter leggere scuse.txt
     1: [
@@ -175,9 +185,9 @@
   };
 
   let excusesByLevel = {
-    1: [...fallbackByLevel[1]],
-    2: [...fallbackByLevel[2]],
-    3: [...fallbackByLevel[3]],
+    1: fallbackByLevel[1].map(ensureReadyToSend),
+    2: fallbackByLevel[2].map(ensureReadyToSend),
+    3: fallbackByLevel[3].map(ensureReadyToSend),
   };
   let currentLevel = 2;
 
@@ -293,10 +303,10 @@
       for (const line of lines) {
         const m = line.match(/^\[(1|2|3)\]\s*(.+)$/);
         if (m) {
-          parsed[Number(m[1])].push(m[2].trim());
+          parsed[Number(m[1])].push(ensureReadyToSend(m[2]));
         } else {
           // Back-compat: se non c'è tag, trattalo come livello 2 (medio)
-          parsed[2].push(line);
+          parsed[2].push(ensureReadyToSend(line));
         }
       }
 

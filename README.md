@@ -15,14 +15,17 @@ Le righe senza tag vengono trattate come livello `[2]` (compatibilità).
 
 ### Avvio (consigliato)
 
-Per permettere al browser di leggere `scuse.txt`, avvia un mini server locale nella cartella:
+Per permettere al browser di leggere `scuse.txt` e (se ti serve) aggiornarlo via backend, avvia il server nella cartella:
 
 ```bash
 cd /Users/mariopaaris/matrix-scuse
-python3 -m http.server 8080
+ADMIN_KEY="metti-una-chiave" python3 backend/server.py
 ```
 
-Poi apri `http://localhost:8080`.
+Poi apri:
+
+- `http://localhost:8080` → generatore
+- `http://localhost:8080/admin.html` → pagina admin (salva `scuse.txt` via API)
 
 ### Nota
 

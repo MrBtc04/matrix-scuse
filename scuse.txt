@@ -54,7 +54,6 @@
 [1] Buongiorno capo, oggi devo restare a casa per riprendermi: non riesco a essere presente in ufficio.
 [1] Buongiorno capo, purtroppo oggi non riesco a venire per malessere improvviso. Mi scuso e vi aggiorno per domani.
 [1] Buongiorno capo, non sto bene e preferisco fermarmi oggi per rientrare in forma domani. Grazie.
-[1] Buongiorno capo, mi scuso ma oggi devo assentarmi per motivi di salute. Vi tengo aggiornati per domani.
 
 [2] Buongiorno capo, purtroppo mi sono svegliato con un forte stato influenzale/febbre. Oggi non potrò venire al lavoro; se necessario invierò il certificato medico.
 [2] Buongiorno capo, mi scuso per il preavviso, ma ho un’emergenza in casa (allagamento/idraulico) e devo restare per risolvere. Oggi non potrò esserci.
@@ -106,10 +105,6 @@
 [2] Buongiorno capo, ho un imprevisto con un animale domestico e devo portarlo dal veterinario. Oggi non riesco a venire.
 [2] Buongiorno capo, devo accompagnare qualcuno a fare una visita/controllo urgente. Oggi non potrò esserci.
 [2] Buongiorno capo, ho un controllo programmato e devo rispettare l’orario. Oggi non riesco a venire.
-[2] Buongiorno capo, ho una convocazione in un ufficio pubblico e non posso mancare. Oggi devo assentarmi.
-[2] Buongiorno capo, ho un problema con i documenti dell’auto e devo andare a sistemare oggi. Oggi non potrò venire.
-[2] Buongiorno capo, ho una seduta/controllo dal fisioterapista programmato oggi e non riesco a spostarlo. Oggi devo assentarmi.
-[2] Buongiorno capo, mi scuso per il preavviso, ma oggi ho un imprevisto logistico importante e non riesco a essere presente. Vi aggiorno.
 
 [3] Buongiorno capo, mi hanno dato un appuntamento in ambulatorio/guardia medica questa mattina. Oggi non riuscirò a venire; appena esco vi aggiorno.
 [3] Buongiorno capo, ho una visita medica con certificazione e oggi devo necessariamente presentarmi. Se serve posso inviare il giustificativo.
@@ -161,8 +156,3 @@
 [3] Buongiorno capo, ho un appuntamento allo sportello su prenotazione per una pratica documentale e non posso spostarlo. Oggi devo assentarmi.
 [3] Buongiorno capo, sto aspettando un intervento tecnico del gestore per un guasto: finché non ripristinano non riesco a collegarmi. Vi aggiorno appena risolto.
 [3] Buongiorno capo, ho una visita di controllo urgente fissata stamattina e devo presentarmi di persona. Oggi non riuscirò a venire.
-[3] Buongiorno capo, ho appuntamento in ambulatorio con tempi di attesa e non riesco a garantire la presenza oggi. Vi aggiorno appena ho notizie.
-[3] Buongiorno capo, oggi devo gestire una pratica urgente allo sportello con appuntamento e tempi non prevedibili. Oggi non riesco a essere presente.
-[3] Buongiorno capo, sono in attesa di un intervento tecnico in casa in fascia oraria vincolata e devo firmare la chiusura lavori. Oggi devo assentarmi.
-[3] Buongiorno capo, ho un intervento di manutenzione obbligatorio programmato oggi e devo essere presente per l’accesso. Oggi non potrò venire.
-[3] Buongiorno capo, ho un imprevisto serio che richiede la mia presenza immediata e oggi non riesco a venire. Mi scuso per il disagio.

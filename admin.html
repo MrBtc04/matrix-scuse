@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin • Scuse</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .admin {
+        display: grid;
+        gap: 12px;
+      }
+      textarea {
+        width: 100%;
+        min-height: 320px;
+        resize: vertical;
+        background: rgba(0,0,0,0.55);
+        border: 1px solid rgba(0,255,65,0.25);
+        border-radius: 10px;
+        color: var(--fg);
+        padding: 12px;
+        font-family: inherit;
+        line-height: 1.4;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      input[type="password"]{
+        background: rgba(0,0,0,0.55);
+        border: 1px solid rgba(0,255,65,0.25);
+        border-radius: 10px;
+        color: var(--fg);
+        padding: 11px 12px;
+        font-family: inherit;
+        min-width: 220px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrix" aria-hidden="true"></canvas>
+
+    <main class="wrap">
+      <section class="card" role="region" aria-label="Admin scuse">
+        <header class="header">
+          <div class="badge">ADMIN</div>
+          <h1>Scuse • Aggiornamento</h1>
+          <p class="sub">Carica e salva <code>scuse.txt</code> via API. Serve la chiave admin.</p>
+        </header>
+
+        <div class="admin">
+          <div class="row">
+            <input id="key" type="password" placeholder="X-Admin-Key" autocomplete="off" />
+            <button id="reload" class="btn ghost" type="button">Ricarica</button>
+            <button id="save" class="btn" type="button">Salva</button>
+            <a class="btn ghost" href="./index.html">Torna al generatore</a>
+          </div>
+
+          <textarea id="txt" spellcheck="false"></textarea>
+          <div id="status" class="meta">Pronto.</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+    <script>
+      (function () {
+        const txt = document.getElementById('txt');
+        const status = document.getElementById('status');
+        const key = document.getElementById('key');
+        const reload = document.getElementById('reload');
+        const save = document.getElementById('save');
+
+        function setStatus(s) { status.textContent = s; }
+
+        async function load() {
+          setStatus('Carico scuse…');
+          const res = await fetch('/api/excuses/raw', { cache: 'no-store' });
+          if (!res.ok) { setStatus('Errore nel caricamento.'); return; }
+          txt.value = await res.text();
+          setStatus('Caricate.');
+        }
+
+        async function persist() {
+          setStatus('Salvo…');
+          const res = await fetch('/api/excuses/raw', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'text/plain; charset=utf-8',
+              'X-Admin-Key': key.value || ''
+            },
+            body: txt.value
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok) {
+            setStatus((data && data.error) ? `Errore: ${data.error}` : 'Errore nel salvataggio.');
+            return;
+          }
+          setStatus('Salvato.');
+        }
+
+        reload.addEventListener('click', load);
+        save.addEventListener('click', persist);
+        load();
+      })();
+    </script>
+  </body>
+</html>
+
